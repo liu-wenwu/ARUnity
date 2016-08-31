@@ -4,6 +4,7 @@
 #include <memory>
 #include <unordered_map>
 
+#include "opencv2/opencv.hpp"
 
 #include "Common.h"
 #include "Marker.h"
@@ -363,6 +364,7 @@ public:
 
 	void set_dictionary(int dict);
 
+	void draw_result(cv::Mat &img);
 
 private:
 

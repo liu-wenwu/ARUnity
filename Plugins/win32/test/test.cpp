@@ -84,8 +84,6 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	unsigned int *tex = new unsigned int[128*128];
 
-	get_marker_texture(0, 128, tex);
-
 
 	while (test_update_camera_frame(buffer))
 	{

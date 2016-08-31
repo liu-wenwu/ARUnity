@@ -273,9 +273,8 @@ void Controller::run_algorithm(cv::Mat &in)
 			cv::Vec3d rvec, tvec;
 			estimate_pose(corners[i], marker.length(), rvec, tvec);
 
-			//aruco::drawAxis(in, camera_matrix, distortion, rvec, tvec, marker.length() / 2);
+			
 
-		
 			marker.set_tracked(true);
 
 			Mat rmat;
@@ -293,7 +292,8 @@ void Controller::run_algorithm(cv::Mat &in)
 
 
 			marker.set_pose(modelview);
-	
+			marker.rvec = rvec;
+			marker.tvec = tvec;
 
 		}
 
@@ -440,4 +440,22 @@ void Controller::set_dictionary(int dict)
 
 	dict_id = dict;
 	dictionary = cv::aruco::getPredefinedDictionary(dict_id);
+}
+
+
+void Controller::draw_result(cv::Mat &img)
+{
+	CameraPara para = camera->get_camera_para();
+	cv::Mat camera_matrix = para.get_camera_matrix();
+	cv::Mat distortion = para.get_distortion();
+
+	for (std::unordered_map<int, Marker>::iterator iter = markers.begin(); iter != markers.end(); ++iter)
+	{
+		if (!iter->second.get_tracked())
+			continue;
+		aruco::drawAxis(img, camera_matrix, distortion, iter->second.rvec, iter->second.tvec, iter->second.length() / 2);
+	}
+
+
+
 }

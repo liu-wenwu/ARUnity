@@ -120,6 +120,8 @@ extern "C"
 		cv::Mat frame(cv::Size(width, height), CV_8UC4, buffer);
 		cv::cvtColor(frame, frame, CV_RGBA2BGR);
 
+		gController.draw_result(frame);
+
 		imshow("test", frame);
 
 		int key = cvWaitKey(30);

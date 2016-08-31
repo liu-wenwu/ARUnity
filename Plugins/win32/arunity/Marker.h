@@ -57,6 +57,11 @@ public:
 
 	static bool get_image(cv::Mat &img, int id, int size, cv::Ptr<cv::aruco::Dictionary> dictionary, int board_bits = 1);
 
+
+
+	cv::Vec3d rvec;
+	cv::Vec3d tvec;
+
 private:
 	cv::aruco::PREDEFINED_DICTIONARY_NAME _dict;
 	int _id;
@@ -66,6 +71,8 @@ private:
 
 	float _pose[16];
 	bool _tracked;
+
+
 };
 
 
