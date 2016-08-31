@@ -15,8 +15,13 @@ The next plan is to complete the natural feature tracking.
  6. Open the scene `test.unity`,we will see Unity Editor 
 
 ![image](https://github.com/liu-wenwu/ARUnity/raw/master/Doc/editor_demo.png)
+<<<<<<< HEAD
 
  7. Make sure your computer is connected to a camera.Push the play button,put the marker in the camera scene,then we will find a cube standing on the marker.
+=======
+ 
+### Running
+>>>>>>> a2a5b70e0fef09e65ea13af576c38f7ecbe54d9e
 ![image](https://github.com/liu-wenwu/ARUnity/raw/master/Doc/running_demo.png)
 
 ## Thanks
@@ -24,6 +29,11 @@ The next plan is to complete the natural feature tracking.
 [aipiano][3]
 
 
+<<<<<<< HEAD
   [1]: https://github.com/opencv/opencv
   [2]: https://github.com/liu-wenwu/artoolkit5 "ARToolkit"
   [3]: http://aipiano.farbox.com/ "aipiano"
+=======
+  [1]: https://github.com/liu-wenwu/artoolkit5 "ARToolkit"
+  [2]: http://aipiano.farbox.com/ "aipiano"
+>>>>>>> a2a5b70e0fef09e65ea13af576c38f7ecbe54d9e
