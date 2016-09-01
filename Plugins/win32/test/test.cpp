@@ -26,7 +26,6 @@ void __stdcall logger(int level, const char* msg)
 	fprintf(stderr, "%02d:%02d:%02d.%03d %s", sys.wHour, sys.wMinute, sys.wSecond, sys.wMilliseconds, msg);
 }
 
-unsigned int buffer[640 * 480];
 
 int __stdcall camera_selector()
 {
@@ -89,8 +88,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	{
 		float modelview[16];
 		bool tracked = get_marker_pose(2, modelview);
-
-
 	}
 
 	system("pause");
